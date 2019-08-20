@@ -10,13 +10,11 @@
 <div id="Iphone">Iphone</div>
 <p id="batteryIphone"></p>
 <div>
-    <textarea id="messageIphone" placeholder="messageIphone"></textarea>
-<textarea id="inboxIphone" placeholder="inboxIphone"></textarea>
+    <input id="messageIphone" oninput="iphone.writeMsg(this.value)" placeholder="messageIphone"></input>
+    <textarea id="inboxIphone" placeholder="inboxIphone"></textarea>
     <textarea id="outboxIphone" placeholder="outboxIphone"></textarea>
 </div>
-<button type="button" onclick="sendMessage()">Send</button>
-<button type="button" onclick="">Show-inbox</button>
-<button type="button" onclick="">Show-outbox</button>
+<button type="button" onclick="sendMessage(iphone,nokia)">Send</button>
 <button type="button" onclick="iphone.turnOnphone()">Turn-on</button>
 <button type="button" onclick="iphone.turnOffphone()">Turn-off</button>
 <button type="button" onclick="iphone.checkOnOff()">Check-on-off</button>
@@ -25,12 +23,10 @@
 <div id="Nokia">Nokia</div>
 <p id="batteryNokia"></p>
 <div>
-    <textarea id="messageNokia" placeholder="messageNokia"></textarea>
+    <input id="messageNokia" oninput="nokia.writeMsg(this.value)" placeholder="messageNokia"></input>
     <textarea id="inboxNokia" placeholder="inboxNokia"></textarea>
     <textarea id="outboxNokia" placeholder="outboxNokia"></textarea></div>
-<button type="button" onclick="sendMessage()">Send</button>
-<button type="button" onclick="">Show-inbox</button>
-<button type="button" onclick="">Show-outbox</button>
+<button type="button" onclick="sendMessage(nokia,iphone)">Send</button>
 <button type="button" onclick="nokia.turnOnphone()">Turn-on</button>
 <button type="button" onclick="nokia.turnOffphone()">Turn-off</button>
 <button type="button" onclick="nokia.checkOnOff()">Check-on-off</button>
